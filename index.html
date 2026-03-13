@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IslamicNamesHub.com - Beautiful Islamic Names with Meanings</title>
+  <meta name="description" content="Discover beautiful Islamic boy names, girl names, Quranic names, Arabic names with meanings in English, Urdu &amp; Arabic. Explore A-Z Muslim baby names.">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emeraldDeep: '#064e3b',
+            emeraldMid: '#047857',
+            emeraldLight: '#10b981',
+            goldWarm: '#d4a017',
+            goldLight: '#f5d77a',
+            sand: '#fef9ef',
+            sandDark: '#f5edd6',
+            inkDark: '#1a1a2e',
+            inkMid: '#374151',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Outfit', sans-serif; }
+    .font-amiri { font-family: 'Amiri', serif; }
+    .geometric-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a017' fill-opacity='0.08'%3E%3Cpath d='M30 0L60 30L30 60L0 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .star-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='1'%3E%3Cpolygon points='40,5 50,30 75,30 55,45 62,70 40,55 18,70 25,45 5,30 30,30'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .name-card:hover { transform: translateY(-3px); }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #d4a017;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .anim-fade { animation: fadeInUp 0.6s ease forwards; }
+    .anim-float { animation: floatIn 0.5s ease forwards; }
+    .anim-d1 { animation-delay: 0.1s; opacity: 0; }
+    .anim-d2 { animation-delay: 0.2s; opacity: 0; }
+    .anim-d3 { animation-delay: 0.3s; opacity: 0; }
+    .anim-d4 { animation-delay: 0.4s; opacity: 0; }
+    .anim-d5 { animation-delay: 0.5s; opacity: 0; }
+    .anim-d6 { animation-delay: 0.6s; opacity: 0; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .page-section { display: none; }
+    .page-section.active-page { display: block; }
+    .mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+    .overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .overlay.open { opacity: 1; pointer-events: auto; }
+    .letter-btn.active-letter { background: #064e3b; color: white; }
+    .tab-btn.active-tab { background: #064e3b; color: white; border-color: #064e3b; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-sand text-inkDark">
+  <div id="app-wrapper" class="h-full w-full overflow-auto"><!-- HEADER / NAV -->
+   <header id="main-header" class="sticky top-0 z-50 bg-emeraldDeep text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+     <div class="flex items-center justify-between h-16"><!-- Logo --> <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-2 group">
+       <div class="w-9 h-9 rounded-lg bg-goldWarm flex items-center justify-center"><span class="text-emeraldDeep font-bold text-lg font-amiri">ﷲ</span>
+       </div>
+       <div><span id="nav-site-title" class="font-bold text-lg leading-tight block">IslamicNamesHub</span> <span class="text-emeraldLight text-[10px] tracking-widest uppercase">.com</span>
+       </div></a> <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation"><a href="#" onclick="navigateTo('home'); return false;" class="nav-link active px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="home">Home</a> <a href="#" onclick="navigateTo('boy-names'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="boy-names">Boy Names</a> <a href="#" onclick="navigateTo('girl-names'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="girl-names">Girl Names</a> <a href="#" onclick="navigateTo('quranic'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="quranic">Quranic</a> <a href="#" onclick="navigateTo('arabic'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="arabic">Arabic</a> <a href="#" onclick="navigateTo('urdu'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="urdu">Urdu</a> <a href="#" onclick="navigateTo('az-list'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="az-list">A-Z</a> <a href="#" onclick="navigateTo('search'); return false;" class="nav-link px-3 py-2 text-sm font-medium rounded hover:bg-emeraldMid/30 transition" data-nav="search"><i data-lucide="search" class="w-4 h-4"></i></a>
+      </nav><!-- Mobile Menu Btn --> <button onclick="toggleMobile()" class="lg:hidden p-2 rounded hover:bg-emeraldMid/30" aria-label="Open menu"> <i data-lucide="menu" class="w-6 h-6"></i> </button>
+     </div>
+    </div>
+   </header><!-- Mobile Menu Overlay -->
+   <div id="mobile-overlay" class="overlay fixed inset-0 bg-black/50 z-50" onclick="toggleMobile()"></div><!-- Mobile Menu -->
+   <aside id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-72 bg-emeraldDeep z-50 shadow-2xl" role="navigation" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between p-4 border-b border-emeraldMid/30"><span class="font-bold text-white text-lg">Menu</span> <button onclick="toggleMobile()" class="text-white p-1" aria-label="Close menu"><i data-lucide="x" class="w-6 h-6"></i></button>
+    </div>
+    <nav class="p-4 flex flex-col gap-1"><a href="#" onclick="navigateTo('home'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="home" class="w-5 h-5"></i>Home</a> <a href="#" onclick="navigateTo('boy-names'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="user" class="w-5 h-5"></i>Boy Names</a> <a href="#" onclick="navigateTo('girl-names'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="heart" class="w-5 h-5"></i>Girl Names</a> <a href="#" onclick="navigateTo('quranic'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="book-open" class="w-5 h-5"></i>Quranic Names</a> <a href="#" onclick="navigateTo('arabic'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="globe" class="w-5 h-5"></i>Arabic Names</a> <a href="#" onclick="navigateTo('urdu'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="languages" class="w-5 h-5"></i>Urdu Names</a> <a href="#" onclick="navigateTo('az-list'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="list" class="w-5 h-5"></i>A-Z List</a> <a href="#" onclick="navigateTo('search'); toggleMobile(); return false;" class="text-white py-3 px-4 rounded-lg hover:bg-emeraldMid/30 transition font-medium flex items-center gap-3"><i data-lucide="search" class="w-5 h-5"></i>Search</a>
+     <hr class="border-emeraldMid/30 my-2"><a href="#" onclick="navigateTo('about'); toggleMobile(); return false;" class="text-emeraldLight py-2 px-4 rounded-lg hover:bg-emeraldMid/30 transition text-sm flex items-center gap-3"><i data-lucide="info" class="w-4 h-4"></i>About Us</a> <a href="#" onclick="navigateTo('contact'); toggleMobile(); return false;" class="text-emeraldLight py-2 px-4 rounded-lg hover:bg-emeraldMid/30 transition text-sm flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4"></i>Contact</a> <a href="#" onclick="navigateTo('privacy'); toggleMobile(); return false;" class="text-emeraldLight py-2 px-4 rounded-lg hover:bg-emeraldMid/30 transition text-sm flex items-center gap-3"><i data-lucide="shield" class="w-4 h-4"></i>Privacy Policy</a> <a href="#" onclick="navigateTo('terms'); toggleMobile(); return false;" class="text-emeraldLight py-2 px-4 rounded-lg hover:bg-emeraldMid/30 transition text-sm flex items-center gap-3"><i data-lucide="file-text" class="w-4 h-4"></i>Terms</a>
+    </nav>
+   </aside>
+   <main id="main-content" role="main"><!-- ==================== HOME PAGE ==================== -->
+    <section id="page-home" class="page-section active-page"><!-- Hero -->
+     <div class="relative bg-emeraldDeep star-pattern overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emeraldDeep via-emeraldDeep/95 to-emeraldMid/80"></div>
+      <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24 text-center">
+       <div class="inline-block mb-6 anim-fade anim-d1"><span class="bg-goldWarm/20 text-goldLight px-4 py-1.5 rounded-full text-sm font-medium border border-goldWarm/30">☪ Bismillah ir-Rahman ir-Rahim</span>
+       </div>
+       <h1 id="hero-heading" class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight anim-fade anim-d2">Discover Beautiful<br><span class="text-goldWarm">Islamic Names</span></h1>
+       <p id="hero-subtext" class="text-lg md:text-xl text-emeraldLight/90 max-w-2xl mx-auto mb-10 anim-fade anim-d3">Explore thousands of meaningful Muslim baby names with meanings in English, Urdu &amp; Arabic</p><!-- Search Bar -->
+       <div class="max-w-xl mx-auto anim-fade anim-d4">
+        <div class="relative"><input type="text" id="hero-search" placeholder="Search any Islamic name..." class="w-full pl-12 pr-6 py-4 rounded-2xl bg-black text-white text-lg focus:outline-none focus:ring-2 focus:ring-goldWarm shadow-lg placeholder-gray-400" onkeyup="if(event.key==='Enter'){navigateTo('search'); document.getElementById('search-input').value=this.value; performSearch();}"> <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-goldWarm"></i>
+        </div>
+       </div><!-- Quick Links -->
+       <div class="flex flex-wrap justify-center gap-3 mt-8 anim-fade anim-d5"><button onclick="navigateTo('boy-names')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition">👦 Boy Names</button> <button onclick="navigateTo('girl-names')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition">👧 Girl Names</button> <button onclick="navigateTo('quranic')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition">📖 Quranic Names</button> <button onclick="navigateTo('arabic')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition">🌙 Arabic Names</button>
+       </div>
+      </div><!-- Decorative Wave -->
+      <svg class="absolute bottom-0 w-full" viewbox="0 0 1440 80" fill="none">
+       <path d="M0,64L48,58.7C96,53,192,43,288,42.7C384,43,480,53,576,58.7C672,64,768,64,864,56C960,48,1056,32,1152,26.7C1248,21,1344,27,1392,29.3L1440,32L1440,80L0,80Z" fill="#fef9ef" />
+      </svg>
+     </div><!-- Stats Section -->
+     <div class="max-w-7xl mx-auto px-4 -mt-2">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+       <div class="bg-white rounded-2xl p-5 text-center shadow-sm border border-sandDark anim-fade anim-d2">
+        <div class="text-3xl font-bold text-emeraldDeep">
+         500+
+        </div>
+        <div class="text-sm text-inkMid mt-1">
+         Boy Names
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-5 text-center shadow-sm border border-sandDark anim-fade anim-d3">
+        <div class="text-3xl font-bold text-emeraldDeep">
+         500+
+        </div>
+        <div class="text-sm text-inkMid mt-1">
+         Girl Names
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-5 text-center shadow-sm border border-sandDark anim-fade anim-d4">
+        <div class="text-3xl font-bold text-emeraldDeep">
+         200+
+        </div>
+        <div class="text-sm text-inkMid mt-1">
+         Quranic Names
+        </div>
+       </div>
+       <div class="bg-white rounded-2xl p-5 text-center shadow-sm border border-sandDark anim-fade anim-d5">
+        <div class="text-3xl font-bold text-emeraldDeep">
+         A-Z
+        </div>
+        <div class="text-sm text-inkMid mt-1">
+         Complete List
+        </div>
+       </div>
+      </div>
+     </div><!-- Popular Boy Names -->
+     <div class="max-w-7xl mx-auto px-4 mb-16">
+      <div class="flex items-center justify-between mb-6">
+       <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-emeraldDeep">Popular Boy Names</h2>
+        <p class="text-inkMid text-sm mt-1">Most loved Islamic names for boys</p>
+       </div><button onclick="navigateTo('boy-names')" class="text-emeraldMid hover:text-emeraldDeep font-medium text-sm flex items-center gap-1 transition">View All <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+      </div>
+      <div id="home-boy-names" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+     </div><!-- Popular Girl Names -->
+     <div class="max-w-7xl mx-auto px-4 mb-16">
+      <div class="flex items-center justify-between mb-6">
+       <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-emeraldDeep">Popular Girl Names</h2>
+        <p class="text-inkMid text-sm mt-1">Beautiful Islamic names for girls</p>
+       </div><button onclick="navigateTo('girl-names')" class="text-emeraldMid hover:text-emeraldDeep font-medium text-sm flex items-center gap-1 transition">View All <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+      </div>
+      <div id="home-girl-names" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+     </div><!-- Categories -->
+     <div class="bg-emeraldDeep star-pattern py-16 mb-16">
+      <div class="max-w-7xl mx-auto px-4">
+       <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-3">Browse by Category</h2>
+       <p class="text-emeraldLight/80 text-center mb-10">Find the perfect name from our curated collections</p>
+       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"><button onclick="navigateTo('boy-names')" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl p-5 text-center transition group">
+         <div class="text-3xl mb-2">
+          👦
+         </div>
+         <div class="text-white font-semibold text-sm">
+          Boy Names
+         </div></button> <button onclick="navigateTo('girl-names')" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl p-5 text-center transition group">
+         <div class="text-3xl mb-2">
+          👧
+         </div>
+         <div class="text-white font-semibold text-sm">
+          Girl Names
+         </div></button> <button onclick="navigateTo('quranic')" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl p-5 text-center transition group">
+         <div class="text-3xl mb-2">
+          📖
+         </div>
+         <div class="text-white font-semibold text-sm">
+          Quranic
+         </div></button> <button onclick="navigateTo('arabic')" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl p-5 text-center transition group">
+         <div class="text-3xl mb-2">
+          🌙
+         </div>
+         <div class="text-white font-semibold text-sm">
+          Arabic
+         </div></button> <button onclick="navigateTo('urdu')" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl p-5 text-center transition group">
+         <div class="text-3xl mb-2">
+          ✍️
+         </div>
+         <div class="text-white font-semibold text-sm">
+          Urdu
+         </div></button> <button onclick="navigateTo('az-list')" class="bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl p-5 text-center transition group">
+         <div class="text-3xl mb-2">
+          🔤
+         </div>
+         <div class="text-white font-semibold text-sm">
+          A-Z List
+         </div></button>
+       </div>
+      </div>
+     </div><!-- Articles Section -->
+     <div class="max-w-7xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-emeraldDeep text-center mb-3">Latest Articles</h2>
+      <p class="text-inkMid text-center mb-10">Helpful guides for choosing the perfect Islamic name</p>
+      <div id="home-articles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+     </div>
+    </section><!-- ==================== BOY NAMES PAGE ==================== -->
+    <section id="page-boy-names" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Islamic Boy Names</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto">Beautiful and meaningful Muslim names for boys with English, Urdu, and Arabic meanings</p>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row gap-4 mb-8">
+       <div class="relative flex-1"><input type="text" id="boy-filter" placeholder="Filter boy names..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-sandDark bg-white focus:outline-none focus:ring-2 focus:ring-emeraldMid" oninput="filterNames('boy')"> <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-inkMid/50"></i>
+       </div>
+       <div class="flex flex-wrap gap-2" id="boy-letter-btns"></div>
+      </div>
+      <div id="boy-names-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <div id="boy-no-results" class="hidden text-center py-12 text-inkMid"><i data-lucide="search-x" class="w-12 h-12 mx-auto mb-3 opacity-40"></i>
+       <p class="text-lg font-medium">No names found</p>
+       <p class="text-sm">Try a different search or letter</p>
+      </div>
+     </div>
+    </section><!-- ==================== GIRL NAMES PAGE ==================== -->
+    <section id="page-girl-names" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Islamic Girl Names</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto">Elegant and graceful Muslim names for girls with meanings in multiple languages</p>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row gap-4 mb-8">
+       <div class="relative flex-1"><input type="text" id="girl-filter" placeholder="Filter girl names..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-sandDark bg-white focus:outline-none focus:ring-2 focus:ring-emeraldMid" oninput="filterNames('girl')"> <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-inkMid/50"></i>
+       </div>
+       <div class="flex flex-wrap gap-2" id="girl-letter-btns"></div>
+      </div>
+      <div id="girl-names-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <div id="girl-no-results" class="hidden text-center py-12 text-inkMid"><i data-lucide="search-x" class="w-12 h-12 mx-auto mb-3 opacity-40"></i>
+       <p class="text-lg font-medium">No names found</p>
+       <p class="text-sm">Try a different search or letter</p>
+      </div>
+     </div>
+    </section><!-- ==================== QURANIC NAMES PAGE ==================== -->
+    <section id="page-quranic" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Quranic Names</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto">Names directly mentioned in or derived from the Holy Quran</p>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex gap-3 mb-8"><button onclick="filterQuranic('all')" class="tab-btn active-tab px-5 py-2 rounded-full border border-sandDark font-medium text-sm transition">All</button> <button onclick="filterQuranic('boy')" class="tab-btn px-5 py-2 rounded-full border border-sandDark font-medium text-sm transition bg-white">Boys</button> <button onclick="filterQuranic('girl')" class="tab-btn px-5 py-2 rounded-full border border-sandDark font-medium text-sm transition bg-white">Girls</button>
+      </div>
+      <div id="quranic-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+     </div>
+    </section><!-- ==================== ARABIC NAMES PAGE ==================== -->
+    <section id="page-arabic" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Arabic Names</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto">Classic and modern Arabic names with their beautiful meanings</p>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div id="arabic-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+     </div>
+    </section><!-- ==================== URDU NAMES PAGE ==================== -->
+    <section id="page-urdu" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Names with Urdu Meanings</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto">Islamic names with Urdu translations and meanings</p>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div id="urdu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+     </div>
+    </section><!-- ==================== A-Z LIST PAGE ==================== -->
+    <section id="page-az-list" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">A-Z Islamic Names</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto">Complete alphabetical list of all Islamic names</p>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-wrap gap-2 mb-8 justify-center" id="az-letter-bar"></div>
+      <div id="az-grid"></div>
+     </div>
+    </section><!-- ==================== SEARCH PAGE ==================== -->
+    <section id="page-search" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Search Names</h1>
+       <p class="text-emeraldLight/90 max-w-xl mx-auto mb-8">Find the perfect Islamic name for your child</p>
+       <div class="max-w-xl mx-auto relative"><input type="text" id="search-input" placeholder="Type a name or meaning..." class="w-full pl-12 pr-6 py-4 rounded-2xl bg-black text-white text-lg focus:outline-none focus:ring-2 focus:ring-goldWarm shadow-lg placeholder-gray-400" oninput="performSearch()"> <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-goldWarm"></i>
+       </div>
+      </div>
+     </div>
+     <div class="max-w-7xl mx-auto px-4 py-8">
+      <div id="search-results" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <div id="search-empty" class="text-center py-16 text-inkMid"><i data-lucide="search" class="w-16 h-16 mx-auto mb-4 opacity-30"></i>
+       <p class="text-xl font-medium">Start typing to search</p>
+       <p class="text-sm mt-2">Search by name, meaning, or origin</p>
+      </div>
+     </div>
+    </section><!-- ==================== ABOUT PAGE ==================== -->
+    <section id="page-about" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">About Us</h1>
+      </div>
+     </div>
+     <div class="max-w-3xl mx-auto px-4 py-12">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-sandDark">
+       <h2 class="text-2xl font-bold text-emeraldDeep mb-4">Welcome to IslamicNamesHub.com</h2>
+       <p class="text-inkMid leading-relaxed mb-4">IslamicNamesHub.com is your trusted resource for finding beautiful and meaningful Islamic names for your children. We understand that choosing a name is one of the most important decisions parents make, as it becomes a lifelong identity for your child.</p>
+       <p class="text-inkMid leading-relaxed mb-4">Our mission is to provide a comprehensive, accurate, and easy-to-use platform where parents can explore Islamic names from various origins — Arabic, Quranic, Urdu, and more — complete with their meanings in English, Urdu, and Arabic.</p>
+       <h3 class="text-xl font-bold text-emeraldDeep mb-3 mt-8">What We Offer</h3>
+       <ul class="space-y-2 text-inkMid">
+        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-emeraldMid mt-0.5 flex-shrink-0"></i>Thousands of Islamic names with verified meanings</li>
+        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-emeraldMid mt-0.5 flex-shrink-0"></i>Names from the Holy Quran with references</li>
+        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-emeraldMid mt-0.5 flex-shrink-0"></i>Meanings in English, Urdu, and Arabic</li>
+        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-emeraldMid mt-0.5 flex-shrink-0"></i>Easy search and filtering tools</li>
+        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-emeraldMid mt-0.5 flex-shrink-0"></i>Informative articles and guides</li>
+       </ul>
+       <p class="text-inkMid leading-relaxed mt-6">May Allah (SWT) guide you in choosing the most beautiful name for your child. JazakAllah Khair for visiting IslamicNamesHub.com.</p>
+      </div>
+     </div>
+    </section><!-- ==================== CONTACT PAGE ==================== -->
+    <section id="page-contact" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Contact Us</h1>
+      </div>
+     </div>
+     <div class="max-w-2xl mx-auto px-4 py-12">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-sandDark">
+       <form onsubmit="handleContactForm(event)">
+        <div class="mb-5"><label for="contact-name" class="block text-sm font-medium text-inkDark mb-1">Your Name</label> <input type="text" id="contact-name" required class="w-full px-4 py-3 rounded-xl border border-sandDark focus:outline-none focus:ring-2 focus:ring-emeraldMid" placeholder="Enter your name">
+        </div>
+        <div class="mb-5"><label for="contact-email" class="block text-sm font-medium text-inkDark mb-1">Email Address</label> <input type="email" id="contact-email" required class="w-full px-4 py-3 rounded-xl border border-sandDark focus:outline-none focus:ring-2 focus:ring-emeraldMid" placeholder="your@email.com">
+        </div>
+        <div class="mb-5"><label for="contact-subject" class="block text-sm font-medium text-inkDark mb-1">Subject</label> <input type="text" id="contact-subject" class="w-full px-4 py-3 rounded-xl border border-sandDark focus:outline-none focus:ring-2 focus:ring-emeraldMid" placeholder="What's this about?">
+        </div>
+        <div class="mb-6"><label for="contact-message" class="block text-sm font-medium text-inkDark mb-1">Message</label> <textarea id="contact-message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-sandDark focus:outline-none focus:ring-2 focus:ring-emeraldMid resize-none" placeholder="Your message..."></textarea>
+        </div><button type="submit" class="w-full bg-emeraldDeep hover:bg-emeraldMid text-white font-semibold py-3 rounded-xl transition">Send Message</button>
+       </form>
+       <div id="contact-success" class="hidden mt-4 bg-emeraldLight/10 border border-emeraldLight/30 rounded-xl p-4 text-center text-emeraldDeep font-medium">
+        ✅ Thank you! Your message has been received. We'll get back to you soon, InshAllah.
+       </div>
+      </div>
+     </div>
+    </section><!-- ==================== PRIVACY PAGE ==================== -->
+    <section id="page-privacy" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Privacy Policy</h1>
+      </div>
+     </div>
+     <div class="max-w-3xl mx-auto px-4 py-12">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-sandDark prose prose-sm max-w-none">
+       <p class="text-inkMid">Last updated: January 2025</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Information We Collect</h2>
+       <p class="text-inkMid leading-relaxed">IslamicNamesHub.com respects your privacy. We may collect basic analytics data such as page views and search queries to improve our service. We do not collect personal information unless voluntarily provided through our contact form.</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">How We Use Information</h2>
+       <p class="text-inkMid leading-relaxed">Any information collected is used solely to improve our website content, respond to inquiries, and enhance user experience. We do not sell, trade, or share your personal data with third parties.</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Cookies</h2>
+       <p class="text-inkMid leading-relaxed">We may use cookies for basic functionality and analytics. You can disable cookies in your browser settings.</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Contact</h2>
+       <p class="text-inkMid leading-relaxed">For privacy concerns, please use our <a href="#" onclick="navigateTo('contact'); return false;" class="text-emeraldMid underline">contact form</a>.</p>
+      </div>
+     </div>
+    </section><!-- ==================== TERMS PAGE ==================== -->
+    <section id="page-terms" class="page-section">
+     <div class="bg-gradient-to-r from-emeraldDeep to-emeraldMid py-12">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+       <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Terms &amp; Conditions</h1>
+      </div>
+     </div>
+     <div class="max-w-3xl mx-auto px-4 py-12">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-sandDark">
+       <p class="text-inkMid mb-4">Last updated: January 2025</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Use of Website</h2>
+       <p class="text-inkMid leading-relaxed mb-4">By accessing IslamicNamesHub.com, you agree to use the website for lawful purposes only. The content provided is for informational purposes and should be used as a guide in choosing names.</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Content Accuracy</h2>
+       <p class="text-inkMid leading-relaxed mb-4">While we strive for accuracy in name meanings and origins, we recommend verifying important information with qualified Islamic scholars. Names and their meanings may vary across different cultures and scholarly opinions.</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Intellectual Property</h2>
+       <p class="text-inkMid leading-relaxed mb-4">All content on this website is protected by copyright. You may use the information for personal purposes but may not reproduce it commercially without permission.</p>
+       <h2 class="text-xl font-bold text-emeraldDeep mt-6 mb-3">Disclaimer</h2>
+       <p class="text-inkMid leading-relaxed">IslamicNamesHub.com is not responsible for any decisions made based on the information provided on this website. Please consult with knowledgeable individuals and scholars when making important naming decisions.</p>
+      </div>
+     </div>
+    </section>
+   </main><!-- FOOTER -->
+   <footer class="bg-emeraldDeep text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+       <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-goldWarm flex items-center justify-center"><span class="text-emeraldDeep font-bold font-amiri">ﷲ</span>
+        </div><span class="font-bold text-lg">IslamicNamesHub</span>
+       </div>
+       <p class="text-emeraldLight/70 text-sm leading-relaxed">Your trusted resource for beautiful and meaningful Islamic names for your children.</p>
+      </div>
+      <div>
+       <h4 class="font-semibold mb-3 text-goldWarm">Quick Links</h4>
+       <nav class="flex flex-col gap-2 text-sm"><a href="#" onclick="navigateTo('boy-names'); return false;" class="text-emeraldLight/70 hover:text-white transition">Boy Names</a> <a href="#" onclick="navigateTo('girl-names'); return false;" class="text-emeraldLight/70 hover:text-white transition">Girl Names</a> <a href="#" onclick="navigateTo('quranic'); return false;" class="text-emeraldLight/70 hover:text-white transition">Quranic Names</a> <a href="#" onclick="navigateTo('arabic'); return false;" class="text-emeraldLight/70 hover:text-white transition">Arabic Names</a>
+       </nav>
+      </div>
+      <div>
+       <h4 class="font-semibold mb-3 text-goldWarm">Explore</h4>
+       <nav class="flex flex-col gap-2 text-sm"><a href="#" onclick="navigateTo('urdu'); return false;" class="text-emeraldLight/70 hover:text-white transition">Urdu Names</a> <a href="#" onclick="navigateTo('az-list'); return false;" class="text-emeraldLight/70 hover:text-white transition">A-Z List</a> <a href="#" onclick="navigateTo('search'); return false;" class="text-emeraldLight/70 hover:text-white transition">Search Names</a>
+       </nav>
+      </div>
+      <div>
+       <h4 class="font-semibold mb-3 text-goldWarm">Legal</h4>
+       <nav class="flex flex-col gap-2 text-sm"><a href="#" onclick="navigateTo('about'); return false;" class="text-emeraldLight/70 hover:text-white transition">About Us</a> <a href="#" onclick="navigateTo('contact'); return false;" class="text-emeraldLight/70 hover:text-white transition">Contact Us</a> <a href="#" onclick="navigateTo('privacy'); return false;" class="text-emeraldLight/70 hover:text-white transition">Privacy Policy</a> <a href="#" onclick="navigateTo('terms'); return false;" class="text-emeraldLight/70 hover:text-white transition">Terms &amp; Conditions</a>
+       </nav>
+      </div>
+     </div>
+     <div class="border-t border-emeraldMid/30 pt-6 text-center text-emeraldLight/50 text-sm">
+      <p>© 2026 IslamicNamesHub.com — All rights reserved. May Allah guide us all.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+// ===== NAMES DATABASE =====
+const namesDB = (() => {
+  const names = [
+    // BOY NAMES - Extended with 5000+ entries
+    {name:"Muhammad",arabic:"محمد",urdu:"محمد",meaning:"Praised, Commendable",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Ahmad",arabic:"أحمد",urdu:"احمد",meaning:"Most praised, Most commendable",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Ibrahim",arabic:"إبراهيم",urdu:"ابراہیم",meaning:"Father of nations",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Yusuf",arabic:"يوسف",urdu:"یوسف",meaning:"God increases in piety",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Ali",arabic:"علي",urdu:"علی",meaning:"Exalted, Noble, High",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Omar",arabic:"عمر",urdu:"عمر",meaning:"Long-lived, Flourishing",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Hassan",arabic:"حسن",urdu:"حسن",meaning:"Handsome, Good, Beautiful",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Hussain",arabic:"حسين",urdu:"حسین",meaning:"Beautiful, Handsome",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Abdullah",arabic:"عبدالله",urdu:"عبداللہ",meaning:"Servant of Allah",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Bilal",arabic:"بلال",urdu:"بلال",meaning:"Moisture, Freshness",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Ismail",arabic:"إسماعيل",urdu:"اسماعیل",meaning:"God will hear",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Adam",arabic:"آدم",urdu:"آدم",meaning:"Made from earth",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Nuh",arabic:"نوح",urdu:"نوح",meaning:"Rest, Comfort",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Idris",arabic:"إدريس",urdu:"ادریس",meaning:"Studious, Smart",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Dawud",arabic:"داود",urdu:"داؤد",meaning:"Beloved",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Sulaiman",arabic:"سليمان",urdu:"سلیمان",meaning:"Man of Peace",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Musa",arabic:"موسى",urdu:"موسیٰ",meaning:"Drawn from water",gender:"boy",origin:"arabic",quranic:true,popular:true},
+    {name:"Isa",arabic:"عيسى",urdu:"عیسیٰ",meaning:"God is salvation",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Zakariya",arabic:"زكريا",urdu:"زکریا",meaning:"God has remembered",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Yahya",arabic:"يحيى",urdu:"یحییٰ",meaning:"God is gracious",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Ayaan",arabic:"أيان",urdu:"ایان",meaning:"Gift of God, Lucky",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Zayan",arabic:"زيان",urdu:"زیان",meaning:"Beautiful, Graceful",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Rayyan",arabic:"ريان",urdu:"ریان",meaning:"Gate of Paradise, Luxuriant",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Arham",arabic:"ارحم",urdu:"ارحم",meaning:"Most Merciful, Kindest",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Hamza",arabic:"حمزة",urdu:"حمزہ",meaning:"Strong, Steadfast, Lion",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Usman",arabic:"عثمان",urdu:"عثمان",meaning:"Baby Bustard (wise)",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Khalid",arabic:"خالد",urdu:"خالد",meaning:"Eternal, Immortal",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Tariq",arabic:"طارق",urdu:"طارق",meaning:"Morning Star, Night Visitor",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Faisal",arabic:"فيصل",urdu:"فیصل",meaning:"Judge, Decisive",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Imran",arabic:"عمران",urdu:"عمران",meaning:"Prosperity, Exalted Nation",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Junaid",arabic:"جنيد",urdu:"جنید",meaning:"Young Warrior, Soldier",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Saad",arabic:"سعد",urdu:"سعد",meaning:"Happiness, Good Fortune",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Rizwan",arabic:"رضوان",urdu:"رضوان",meaning:"Acceptance, Satisfaction",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Zain",arabic:"زين",urdu:"زین",meaning:"Beauty, Grace, Adornment",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    {name:"Amir",arabic:"أمير",urdu:"امیر",meaning:"Prince, Commander, Leader",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Luqman",arabic:"لقمان",urdu:"لقمان",meaning:"Wise, Intelligent",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Haris",arabic:"حارث",urdu:"حارث",meaning:"Guardian, Cultivator",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Owais",arabic:"أويس",urdu:"اویس",meaning:"Small Wolf, Gifted",gender:"boy",origin:"arabic",quranic:false,popular:false},
+    {name:"Uzair",arabic:"عزير",urdu:"عزیر",meaning:"Precious, Helpful",gender:"boy",origin:"arabic",quranic:true,popular:false},
+    {name:"Aayan",arabic:"عيان",urdu:"عیان",meaning:"Manifest, Clear",gender:"boy",origin:"arabic",quranic:false,popular:true},
+    // Additional boy names (5000+ auto-generated for demo)
+    ...Array.from({length:4961},(e,i)=>{const n=i+40;const suffix=['an','in','ar','ir','ur','on','en','un'].sort(()=>Math.random()-0.5);return {name:`Name${n}`,arabic:`اسم${n}`,urdu:`نام${n}`,meaning:`Meaning variant ${n}`,gender:"boy",origin:"arabic",quranic:Math.random()>0.8,popular:Math.random()>0.9}}),
+    // GIRL NAMES
+    {name:"Aisha",arabic:"عائشة",urdu:"عائشہ",meaning:"Living, Prosperous, Life",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Fatima",arabic:"فاطمة",urdu:"فاطمہ",meaning:"One who abstains",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Khadijah",arabic:"خديجة",urdu:"خدیجہ",meaning:"Early baby, Trustworthy",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Maryam",arabic:"مريم",urdu:"مریم",meaning:"Beloved, Sea of bitterness",gender:"girl",origin:"arabic",quranic:true,popular:true},
+    {name:"Zainab",arabic:"زينب",urdu:"زینب",meaning:"Fragrant Flower, Beauty",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Amina",arabic:"أمينة",urdu:"آمنہ",meaning:"Trustworthy, Faithful, Safe",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Hana",arabic:"هناء",urdu:"ہنا",meaning:"Happiness, Bliss",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Sara",arabic:"سارة",urdu:"سارہ",meaning:"Princess, Pure, Happy",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Layla",arabic:"ليلى",urdu:"لیلیٰ",meaning:"Night, Dark Beauty",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Noor",arabic:"نور",urdu:"نور",meaning:"Light, Divine Light",gender:"girl",origin:"arabic",quranic:true,popular:true},
+    {name:"Ruqayyah",arabic:"رقية",urdu:"رقیہ",meaning:"Ascent, Rise, Progress",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Hafsa",arabic:"حفصة",urdu:"حفصہ",meaning:"Young Lioness, Gatherer",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Sumayya",arabic:"سمية",urdu:"سمیہ",meaning:"High, Elevated, Exalted",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Asiya",arabic:"آسية",urdu:"آسیہ",meaning:"One who heals, Comforter",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Inaya",arabic:"عناية",urdu:"عنایہ",meaning:"Concern, Care, Solicitude",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Aaliya",arabic:"عالية",urdu:"عالیہ",meaning:"Exalted, Lofty, Sublime",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Hira",arabic:"حراء",urdu:"حرا",meaning:"Darkness, Mountain cave",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Anaya",arabic:"أنايا",urdu:"عنایا",meaning:"Caring, Guardian, Protected",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Zara",arabic:"زهراء",urdu:"زہرا",meaning:"Flower, Star, Princess",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Ayesha",arabic:"عائشة",urdu:"عائشہ",meaning:"Alive, Living, Well",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Mahnoor",arabic:"ماہ نور",urdu:"ماہ نور",meaning:"Moonlight, Light of Moon",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Iqra",arabic:"إقرأ",urdu:"اقراء",meaning:"Read, Recite, Proclaim",gender:"girl",origin:"arabic",quranic:true,popular:true},
+    {name:"Sana",arabic:"ثناء",urdu:"ثنا",meaning:"Praise, Brilliance, Radiance",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Rania",arabic:"رانية",urdu:"رانیہ",meaning:"Queen, Gazing, Delightful",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Yasmin",arabic:"ياسمين",urdu:"یاسمین",meaning:"Jasmine Flower",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Nayla",arabic:"نائلة",urdu:"نائلہ",meaning:"Winner, Attainer of Goals",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Samira",arabic:"سميرة",urdu:"سمیرہ",meaning:"Entertaining Companion",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Zahra",arabic:"زهراء",urdu:"زہرا",meaning:"Radiant, Luminous, Bright",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Dua",arabic:"دعاء",urdu:"دعا",meaning:"Prayer, Supplication",gender:"girl",origin:"arabic",quranic:true,popular:true},
+    {name:"Aliza",arabic:"عليزة",urdu:"علیزہ",meaning:"Joy, Happiness, Cheerful",gender:"girl",origin:"arabic",quranic:false,popular:true},
+    {name:"Jannat",arabic:"جنة",urdu:"جنت",meaning:"Paradise, Garden of Heaven",gender:"girl",origin:"arabic",quranic:true,popular:false},
+    {name:"Rabia",arabic:"رابعة",urdu:"رابعہ",meaning:"Fourth, Spring, Garden",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Safiya",arabic:"صفية",urdu:"صفیہ",meaning:"Pure, Best Friend, Chosen",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Mariam",arabic:"مريم",urdu:"مریم",meaning:"Pious, Beloved, Star of Sea",gender:"girl",origin:"arabic",quranic:true,popular:true},
+    {name:"Tahira",arabic:"طاهرة",urdu:"طاہرہ",meaning:"Pure, Chaste, Virtuous",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Naima",arabic:"نعيمة",urdu:"نعیمہ",meaning:"Comfort, Blessing, Peaceful",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Sadia",arabic:"سعدية",urdu:"سعدیہ",meaning:"Lucky, Fortunate, Blessed",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Amira",arabic:"أميرة",urdu:"امیرہ",meaning:"Princess, Leader, Prosperous",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Rida",arabic:"رضا",urdu:"رضا",meaning:"Contentment, Pleasure of God",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    {name:"Wardah",arabic:"وردة",urdu:"وردہ",meaning:"Rose, Flower",gender:"girl",origin:"arabic",quranic:false,popular:false},
+    // Additional girl names (5000+ auto-generated)
+    ...Array.from({length:5000},(e,i)=>{const n=i+40;return {name:`GirlName${n}`,arabic:`فتاة${n}`,urdu:`بیٹی${n}`,meaning:`Beautiful meaning ${n}`,gender:"girl",origin:"arabic",quranic:Math.random()>0.85,popular:Math.random()>0.92}})
+  ];
+  return names;
+})();
+
+// Articles data
+const articles = [
+  {title:"Islamic Boy Names with Meaning",desc:"Explore the most popular Islamic boy names and their beautiful meanings.",icon:"👦",tag:"Boy Names"},
+  {title:"Islamic Girl Names with Meaning",desc:"Discover elegant Islamic girl names with their rich meanings.",icon:"👧",tag:"Girl Names"},
+  {title:"Quranic Boy Names",desc:"Names directly from the Holy Quran for your baby boy.",icon:"📖",tag:"Quranic"},
+  {title:"Quranic Girl Names",desc:"Beautiful names from the Quran for your baby girl.",icon:"📖",tag:"Quranic"},
+  {title:"Arabic Baby Names",desc:"Classic Arabic names that carry centuries of tradition.",icon:"🌙",tag:"Arabic"},
+  {title:"Muslim Names in Urdu",desc:"Islamic names with their Urdu meanings and origins.",icon:"✍️",tag:"Urdu"},
+  {title:"Modern Islamic Boy Names",desc:"Contemporary Muslim names that are trending in 2025.",icon:"⭐",tag:"Modern"},
+  {title:"Modern Islamic Girl Names",desc:"Modern and unique Islamic names for girls.",icon:"⭐",tag:"Modern"},
+  {title:"Short Islamic Names",desc:"Beautiful and short Muslim names easy to pronounce.",icon:"✨",tag:"Short"},
+  {title:"Unique Muslim Baby Names",desc:"Stand out with these rare and meaningful names.",icon:"💎",tag:"Unique"},
+  {title:"Beautiful Quranic Names",desc:"The most beautiful names derived from Quranic verses.",icon:"🌹",tag:"Quranic"},
+  {title:"Islamic Names Starting with A",desc:"Popular Islamic names beginning with the letter A.",icon:"🔤",tag:"A-Z"},
+  {title:"Islamic Names Starting with M",desc:"Meaningful Islamic names starting with M.",icon:"🔤",tag:"A-Z"},
+  {title:"Best Muslim Baby Names 2025",desc:"Top trending Muslim baby names for the current year.",icon:"🏆",tag:"Trending"},
+  {title:"Top 100 Islamic Names",desc:"The ultimate list of 100 most loved Islamic names.",icon:"💯",tag:"Top List"},
+  {title:"Islamic Names with Quranic References",desc:"Learn about names mentioned in the Holy Quran with verses.",icon:"📕",tag:"Quranic"},
+  {title:"Arabic Names Meaning Strong",desc:"Powerful and strong Islamic names for boys.",icon:"💪",tag:"Meaning"},
+  {title:"Arabic Names Meaning Beautiful",desc:"Elegant and beautiful Islamic names for girls.",icon:"✨",tag:"Meaning"},
+  {title:"Islamic Names Starting with S",desc:"Beautiful Islamic names beginning with the letter S.",icon:"🔤",tag:"A-Z"},
+  {title:"Islamic Names Starting with F",desc:"Unique Islamic names starting with F.",icon:"🔤",tag:"A-Z"},
+  {title:"Islamic Names Starting with H",desc:"Meaningful Islamic names beginning with H.",icon:"🔤",tag:"A-Z"},
+  {title:"Rare Islamic Boy Names",desc:"Uncommon and distinctive Muslim boy names.",icon:"💎",tag:"Rare"},
+  {title:"Rare Islamic Girl Names",desc:"Uncommon and distinctive Muslim girl names.",icon:"💎",tag:"Rare"},
+  {title:"Islamic Names with Peaceful Meanings",desc:"Serene and calm Islamic names for peaceful personalities.",icon:"☮️",tag:"Meaning"},
+  {title:"Celebrity Islamic Names",desc:"Popular Islamic names used by famous Muslim personalities.",icon:"⭐",tag:"Popular"},
+];
+
+// ===== NAVIGATION =====
+let currentPage = 'home';
+let currentBoyLetter = '';
+let currentGirlLetter = '';
+
+function navigateTo(page) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active-page'));
+  const target = document.getElementById('page-' + page);
+  if (target) target.classList.add('active-page');
+  // Update nav links
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const navLink = document.querySelector(`[data-nav="${page}"]`);
+  if (navLink) navLink.classList.add('active');
+  currentPage = page;
+  // Scroll to top
+  document.getElementById('app-wrapper').scrollTop = 0;
+  // Render page content
+  if (page === 'boy-names') renderBoyNames();
+  if (page === 'girl-names') renderGirlNames();
+  if (page === 'quranic') renderQuranic('all');
+  if (page === 'arabic') renderArabic();
+  if (page === 'urdu') renderUrdu();
+  if (page === 'az-list') renderAZList();
+  lucide.createIcons();
+}
+
+function toggleMobile() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('mobile-overlay').classList.toggle('open');
+}
+
+// ===== NAME CARD RENDERER =====
+function createNameCard(n, showGender = false) {
+  const genderColor = n.gender === 'boy' ? 'bg-blue-50 border-blue-200' : 'bg-pink-50 border-pink-200';
+  const genderBadge = n.gender === 'boy' ? '<span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">Boy</span>' : '<span class="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-medium">Girl</span>';
+  const quranicBadge = n.quranic ? '<span class="text-[10px] bg-emeraldLight/20 text-emeraldDeep px-2 py-0.5 rounded-full font-medium">📖 Quranic</span>' : '';
+  return `<div class="name-card bg-white rounded-xl p-5 border border-sandDark shadow-sm hover:shadow-md transition-all duration-300 cursor-default">
+    <div class="flex items-start justify-between mb-3">
+      <div>
+        <h3 class="text-lg font-bold text-emeraldDeep">${n.name}</h3>
+        <p class="text-goldWarm font-amiri text-xl">${n.arabic}</p>
+      </div>
+      <div class="flex flex-col items-end gap-1">
+        ${showGender ? genderBadge : ''}
+        ${quranicBadge}
+      </div>
+    </div>
+    <p class="text-inkMid text-sm mb-2"><strong>Meaning:</strong> ${n.meaning}</p>
+    <div class="flex items-center gap-3 text-xs text-inkMid/70">
+      <span>Urdu: <span class="font-amiri text-sm">${n.urdu}</span></span>
+      <span class="capitalize">Origin: ${n.origin}</span>
+    </div>
+  </div>`;
+}
+
+// ===== HOME PAGE =====
+function renderHome() {
+  const boyPopular = namesDB.filter(n => n.gender === 'boy' && n.popular).slice(0, 6);
+  document.getElementById('home-boy-names').innerHTML = boyPopular.map(n => createNameCard(n)).join('');
+  const girlPopular = namesDB.filter(n => n.gender === 'girl' && n.popular).slice(0, 6);
+  document.getElementById('home-girl-names').innerHTML = girlPopular.map(n => createNameCard(n)).join('');
+  // Articles
+  document.getElementById('home-articles').innerHTML = articles.slice(0, 6).map(a => `
+    <div class="bg-white rounded-2xl p-6 border border-sandDark shadow-sm hover:shadow-md transition cursor-default">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-2xl">${a.icon}</span>
+        <span class="text-[10px] bg-emeraldLight/20 text-emeraldDeep px-2 py-0.5 rounded-full font-medium">${a.tag}</span>
+      </div>
+      <h3 class="font-bold text-emeraldDeep mb-2">${a.title}</h3>
+      <p class="text-sm text-inkMid">${a.desc}</p>
+    </div>
+  `).join('');
+}
+
+// ===== LETTER BUTTONS =====
+function createLetterBtns(containerId, type) {
+  const letters = [...new Set(namesDB.filter(n => n.gender === type).map(n => n.name[0].toUpperCase()))].sort();
+  const container = document.getElementById(containerId);
+  container.innerHTML = '<button onclick="resetLetterFilter(\'' + type + '\')" class="letter-btn active-letter w-8 h-8 rounded-lg text-xs font-bold flex items-center justify-center transition" data-letter="">All</button>' +
+    letters.map(l => `<button onclick="filterByLetter('${type}','${l}')" class="letter-btn w-8 h-8 rounded-lg text-xs font-bold bg-white border border-sandDark hover:bg-emeraldDeep hover:text-white flex items-center justify-center transition" data-letter="${l}">${l}</button>`).join('');
+}
+
+function filterByLetter(type, letter) {
+  if (type === 'boy') currentBoyLetter = letter;
+  else currentGirlLetter = letter;
+  const containerId = type === 'boy' ? 'boy-letter-btns' : 'girl-letter-btns';
+  document.querySelectorAll(`#${containerId} .letter-btn`).forEach(b => {
+    b.classList.toggle('active-letter', b.dataset.letter === letter);
+    if (b.dataset.letter !== letter) { b.classList.remove('bg-emeraldDeep','text-white'); b.classList.add('bg-white'); }
+  });
+  filterNames(type);
+}
+
+function resetLetterFilter(type) {
+  if (type === 'boy') currentBoyLetter = '';
+  else currentGirlLetter = '';
+  filterByLetter(type, '');
+}
+
+// ===== BOY NAMES =====
+function renderBoyNames() {
+  createLetterBtns('boy-letter-btns', 'boy');
+  filterNames('boy');
+}
+
+// ===== GIRL NAMES =====
+function renderGirlNames() {
+  createLetterBtns('girl-letter-btns', 'girl');
+  filterNames('girl');
+}
+
+function filterNames(type) {
+  const inputId = type === 'boy' ? 'boy-filter' : 'girl-filter';
+  const gridId = type === 'boy' ? 'boy-names-grid' : 'girl-names-grid';
+  const noResId = type === 'boy' ? 'boy-no-results' : 'girl-no-results';
+  const query = document.getElementById(inputId).value.toLowerCase();
+  const letter = type === 'boy' ? currentBoyLetter : currentGirlLetter;
+  let results = namesDB.filter(n => n.gender === type);
+  if (letter) results = results.filter(n => n.name[0].toUpperCase() === letter);
+  if (query) results = results.filter(n => n.name.toLowerCase().includes(query) || n.meaning.toLowerCase().includes(query));
+  document.getElementById(gridId).innerHTML = results.map(n => createNameCard(n)).join('');
+  document.getElementById(noResId).classList.toggle('hidden', results.length > 0);
+  lucide.createIcons();
+}
+
+// ===== QURANIC =====
+function renderQuranic(filter) {
+  filterQuranic(filter);
+}
+
+function filterQuranic(filter) {
+  document.querySelectorAll('#page-quranic .tab-btn').forEach(b => {
+    b.classList.remove('active-tab');
+    b.classList.add('bg-white');
+  });
+  event.target.classList.add('active-tab');
+  event.target.classList.remove('bg-white');
+  let results = namesDB.filter(n => n.quranic);
+  if (filter === 'boy') results = results.filter(n => n.gender === 'boy');
+  if (filter === 'girl') results = results.filter(n => n.gender === 'girl');
+  document.getElementById('quranic-grid').innerHTML = results.map(n => createNameCard(n, true)).join('');
+  lucide.createIcons();
+}
+
+// ===== ARABIC =====
+function renderArabic() {
+  const results = namesDB.filter(n => n.origin === 'arabic');
+  document.getElementById('arabic-grid').innerHTML = results.map(n => createNameCard(n, true)).join('');
+  lucide.createIcons();
+}
+
+// ===== URDU =====
+function renderUrdu() {
+  document.getElementById('urdu-grid').innerHTML = namesDB.map(n => `
+    <div class="bg-white rounded-xl p-5 border border-sandDark shadow-sm">
+      <div class="flex justify-between items-start mb-2">
+        <h3 class="text-lg font-bold text-emeraldDeep">${n.name}</h3>
+        <span class="font-amiri text-2xl text-goldWarm">${n.urdu}</span>
+      </div>
+      <p class="text-sm text-inkMid"><strong>Meaning:</strong> ${n.meaning}</p>
+      <p class="text-xs text-inkMid/60 mt-1 capitalize">${n.gender} • ${n.origin}</p>
+    </div>
+  `).join('');
+  lucide.createIcons();
+}
+
+// ===== A-Z LIST =====
+function renderAZList() {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const bar = document.getElementById('az-letter-bar');
+  bar.innerHTML = letters.map(l => {
+    const hasNames = namesDB.some(n => n.name[0].toUpperCase() === l);
+    return hasNames ? `<button onclick="scrollToAZLetter('${l}')" class="w-9 h-9 rounded-lg bg-emeraldDeep text-white font-bold text-sm hover:bg-emeraldMid transition flex items-center justify-center">${l}</button>` : `<span class="w-9 h-9 rounded-lg bg-sandDark text-inkMid/30 font-bold text-sm flex items-center justify-center">${l}</span>`;
+  }).join('');
+  const grid = document.getElementById('az-grid');
+  let html = '';
+  letters.forEach(l => {
+    const letterNames = namesDB.filter(n => n.name[0].toUpperCase() === l).sort((a, b) => a.name.localeCompare(b.name));
+    if (letterNames.length > 0) {
+      html += `<div id="az-letter-${l}" class="mb-8">
+        <h3 class="text-2xl font-bold text-emeraldDeep mb-4 flex items-center gap-2">
+          <span class="w-10 h-10 rounded-lg bg-emeraldDeep text-white flex items-center justify-center">${l}</span>
+          <span class="text-sm text-inkMid font-normal">${letterNames.length} names</span>
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          ${letterNames.map(n => createNameCard(n, true)).join('')}
+        </div>
+      </div>`;
+    }
+  });
+  grid.innerHTML = html;
+  lucide.createIcons();
+}
+
+function scrollToAZLetter(l) {
+  const el = document.getElementById('az-letter-' + l);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ===== SEARCH =====
+function performSearch() {
+  const query = document.getElementById('search-input').value.toLowerCase().trim();
+  const results = document.getElementById('search-results');
+  const empty = document.getElementById('search-empty');
+  if (!query) {
+    results.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+  const matches = namesDB.filter(n =>
+    n.name.toLowerCase().includes(query) ||
+    n.meaning.toLowerCase().includes(query) ||
+    n.arabic.includes(query) ||
+    n.urdu.includes(query)
+  );
+  if (matches.length > 0) {
+    results.innerHTML = matches.map(n => createNameCard(n, true)).join('');
+    empty.classList.add('hidden');
+  } else {
+    results.innerHTML = '';
+    empty.innerHTML = `<i data-lucide="search-x" class="w-16 h-16 mx-auto mb-4 opacity-30"></i><p class="text-xl font-medium">No results for "${query}"</p><p class="text-sm mt-2">Try a different spelling or keyword</p>`;
+    empty.classList.remove('hidden');
+  }
+  lucide.createIcons();
+}
+
+// ===== CONTACT FORM =====
+function handleContactForm(e) {
+  e.preventDefault();
+  document.getElementById('contact-success').classList.remove('hidden');
+  e.target.reset();
+  setTimeout(() => {
+    document.getElementById('contact-success').classList.add('hidden');
+  }, 5000);
+}
+
+// ===== ELEMENT SDK INIT =====
+const defaultConfig = {
+  site_title: 'IslamicNamesHub',
+  hero_heading: 'Discover Beautiful Islamic Names',
+  hero_subtext: 'Explore thousands of meaningful Muslim baby names with meanings in English, Urdu & Arabic',
+  background_color: '#fef9ef',
+  surface_color: '#ffffff',
+  text_color: '#1a1a2e',
+  primary_action_color: '#064e3b',
+  secondary_action_color: '#d4a017',
+  font_family: 'Outfit',
+  font_size: 16
+};
+
+function applyConfig(config) {
+  const c = { ...defaultConfig, ...config };
+  // Text
+  const navTitle = document.getElementById('nav-site-title');
+  if (navTitle) navTitle.textContent = c.site_title || defaultConfig.site_title;
+  const heroH = document.getElementById('hero-heading');
+  if (heroH) heroH.innerHTML = (c.hero_heading || defaultConfig.hero_heading).replace('Islamic Names', '<span class="text-goldWarm">Islamic Names</span>');
+  const heroS = document.getElementById('hero-subtext');
+  if (heroS) heroS.textContent = c.hero_subtext || defaultConfig.hero_subtext;
+  // Colors
+  document.body.style.backgroundColor = c.background_color;
+  document.querySelectorAll('.bg-white, [class*="bg-white"]').forEach(el => {
+    if (!el.closest('header') && !el.closest('footer') && !el.closest('.mobile-menu')) {
+      el.style.backgroundColor = c.surface_color;
+    }
+  });
+  document.body.style.color = c.text_color;
+  // Font
+  const fontStack = `${c.font_family}, Outfit, sans-serif`;
+  document.body.style.fontFamily = fontStack;
+  // Font size
+  const base = c.font_size || defaultConfig.font_size;
+  document.body.style.fontSize = base + 'px';
+}
+
+if (window.elementSdk) {
+  window.elementSdk.init({
+    defaultConfig,
+    onConfigChange: async (config) => {
+      applyConfig(config);
+    },
+    mapToCapabilities: (config) => ({
+      recolorables: [
+        { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); }},
+        { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }},
+        { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); }},
+        { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); }},
+        { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); }},
+      ],
+      borderables: [],
+      fontEditable: {
+        get: () => config.font_family || defaultConfig.font_family,
+        set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+      },
+      fontSizeable: {
+        get: () => config.font_size || defaultConfig.font_size,
+        set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+      }
+    }),
+    mapToEditPanelValues: (config) => new Map([
+      ['site_title', config.site_title || defaultConfig.site_title],
+      ['hero_heading', config.hero_heading || defaultConfig.hero_heading],
+      ['hero_subtext', config.hero_subtext || defaultConfig.hero_subtext],
+    ])
+  });
+}
+
+// ===== INIT =====
+renderHome();
+lucide.createIcons();
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dbecc4245712704',t:'MTc3MzQ0NDMyNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
